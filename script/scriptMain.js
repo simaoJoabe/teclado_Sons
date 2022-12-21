@@ -1,9 +1,13 @@
-function testaSeEhString(valueInput){
-    if(typeof valueInput.value  === Number){
-        return "numero"
-    }else{
-        return ""
+const tocaOSom = (selectAudio) =>{
+    const elemento = document.querySelector(selectAudio)
+
+    if(elemento === null){
+        throw new Error("Elemento não encontrado")
     }
+    if(elemento != null && elemento.localName === "audio"){
+        elemento.play()
+    }
+
 }
 
-console.log(testaSeEhString(10))
+const listaTeclas = document.querySelectorAll(".tecla")
